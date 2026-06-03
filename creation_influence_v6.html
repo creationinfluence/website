@@ -1521,26 +1521,27 @@ footer{
       </div>
     </div>
     <div class="r d1">
-      <form onsubmit="return false">
+      <form name="consultation" method="POST" data-netlify="true" action="/thank-you">
+        <input type="hidden" name="form-name" value="consultation">
         <div class="form-2col">
-          <div class="form-field"><label>姓名</label><input type="text" placeholder="你的名字"></div>
-          <div class="form-field"><label>聯絡方式</label><input type="text" placeholder="LINE ID 或手機"></div>
+          <div class="form-field"><label>姓名</label><input type="text" name="姓名" placeholder="你的名字" required></div>
+          <div class="form-field"><label>聯絡方式</label><input type="text" name="聯絡方式" placeholder="LINE ID 或手機" required></div>
         </div>
         <div class="form-2col">
           <div class="form-field"><label>產業類別</label>
-            <select><option value="">請選擇</option><option>美妝保養</option><option>餐飲食品</option><option>電商零售</option><option>專業服務</option><option>教育培訓</option><option>個人品牌 / 創作者</option><option>其他</option></select>
+            <select name="產業類別" required><option value="">請選擇</option><option>美妝保養</option><option>餐飲食品</option><option>電商零售</option><option>專業服務</option><option>教育培訓</option><option>個人品牌 / 創作者</option><option>其他</option></select>
           </div>
           <div class="form-field"><label>目前經營平台</label>
-            <select><option value="">請選擇</option><option>TikTok</option><option>Instagram</option><option>YouTube</option><option>多平台並行</option><option>尚未開始</option></select>
+            <select name="目前經營平台" required><option value="">請選擇</option><option>TikTok</option><option>Instagram</option><option>YouTube</option><option>多平台並行</option><option>尚未開始</option></select>
           </div>
         </div>
         <div class="form-2col">
           <div class="form-field"><label>預算範圍</label>
-            <select><option value="">請選擇</option><option>NT$ 10,000 以下</option><option>NT$ 10,000 – 30,000</option><option>NT$ 30,000 – 80,000</option><option>NT$ 80,000 以上</option><option>待討論</option></select>
+            <select name="預算範圍"><option value="">請選擇</option><option>NT$ 10,000 以下</option><option>NT$ 10,000 – 30,000</option><option>NT$ 30,000 – 80,000</option><option>NT$ 80,000 以上</option><option>待討論</option></select>
           </div>
-          <div class="form-field"><label>客群年齡</label><input type="text" placeholder="例：25–35 歲女性"></div>
+          <div class="form-field"><label>客群年齡</label><input type="text" name="客群年齡" placeholder="例：25–35 歲女性"></div>
         </div>
-        <div class="form-field"><label>目前遇到的問題</label><textarea placeholder="請簡單描述你的現況與希望達到的目標，或任何你想對我們說的話。"></textarea></div>
+        <div class="form-field"><label>目前遇到的問題</label><textarea name="目前遇到的問題" required placeholder="請簡單描述你的現況與希望達到的目標，或任何你想對我們說的話。"></textarea></div>
         <button type="submit" class="form-sub" id="fsub">送出諮詢申請 →</button>
       </form>
     </div>
@@ -1670,19 +1671,7 @@ document.querySelectorAll('.faq-q').forEach(q=>{
   })
 })
 
-/* ── Form ── */
-document.getElementById('fsub').addEventListener('click',function(){
-  const all=[...document.querySelectorAll('form input,form select,form textarea')]
-  if(all.some(i=>!i.value)){
-    this.textContent='請填寫所有欄位後再送出'
-    this.style.background='linear-gradient(135deg,#7c3535,#991b1b)'
-    setTimeout(()=>{this.textContent='送出諮詢申請 →';this.style.background=''},2500)
-    return
-  }
-  this.textContent='✓ 已收到，我們將盡快與你聯繫！'
-  this.style.background='linear-gradient(135deg,#065f46,#10b981)'
-  this.disabled=true
-})
+/* form handled by Netlify */
 </script>
 </body>
 </html>
