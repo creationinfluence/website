@@ -102,22 +102,29 @@ nav{
   min-height:100svh;
   display:flex;flex-direction:column;justify-content:flex-end;
   overflow:hidden;
-  background:var(--charcoal);
+  background:#0d1f3c;
 }
 .hero-video-bg{
   position:absolute;inset:0;
-  background:#111;
+  background:linear-gradient(145deg,#0d1f3c 0%,#1a3a5c 40%,#0f2a4a 70%,#0a1628 100%);
   display:flex;align-items:center;justify-content:center;
+}
+.hero-video-bg::before{
+  content:'';
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 70% 40%, rgba(37,99,235,.15) 0%, transparent 60%),
+             radial-gradient(ellipse at 20% 80%, rgba(6,182,212,.08) 0%, transparent 50%);
+  pointer-events:none;
 }
 .hero-video-bg::after{
   content:'';
   position:absolute;inset:0;
   background:linear-gradient(
     to bottom,
-    rgba(26,26,26,.2) 0%,
-    rgba(26,26,26,0) 35%,
-    rgba(26,26,26,.6) 70%,
-    rgba(26,26,26,.95) 100%
+    rgba(13,31,60,.1) 0%,
+    rgba(13,31,60,0) 30%,
+    rgba(13,31,60,.5) 70%,
+    rgba(13,31,60,.95) 100%
   );
 }
 .video-placeholder{
@@ -156,6 +163,12 @@ nav{
 .hero-eyebrow::before{
   content:'';width:32px;height:1px;
   background:rgba(247,244,239,.3);display:block;
+}
+.hero-tagline{
+  margin-top:20px;
+  font-size:14px;letter-spacing:2px;font-weight:300;
+  color:rgba(247,244,239,.45);
+  font-family:'Noto Serif TC',serif;
 }
 .hero-title{
   font-family:'Noto Serif TC','Georgia',serif;
@@ -650,6 +663,7 @@ footer{
         <span class="small" id="h-small">不是每個品牌都需要更多曝光。</span>
         <span class="big" id="h-big">有些品牌<br><em>需要的是</em><br>更清楚的聲音。</span>
       </h1>
+      <p class="hero-tagline" id="h-tagline">讓每個有故事的人，都值得被看見。</p>
     </div>
     <div class="hero-right">
       <p class="hero-desc" id="h-desc">Creation Influence 協助品牌<br>找到屬於自己的內容語言，<br>讓對的人，在對的時刻，<br>認識你。</p>
@@ -897,6 +911,7 @@ const t={
     big:'有些品牌<br><em>需要的是</em><br>更清楚的聲音。',
     desc:'Creation Influence 協助品牌<br>找到屬於自己的內容語言，<br>讓對的人，在對的時刻，<br>認識你。',
     cta:'了解我們的工作方式',
+    tagline:'讓每個有故事的人，都值得被看見。',
     s1:'品牌合作',s2:'內容觸及',s3:'深耕品牌內容',
   },
   en:{
@@ -905,6 +920,7 @@ const t={
     big:'Some brands need<br><em>a clearer</em><br>voice.',
     desc:'Creation Influence helps brands<br>find their content language,<br>so the right people find them<br>at the right moment.',
     cta:'See how we work',
+    tagline:'Everyone with a story deserves to be seen.',
     s1:'Brand Partners',s2:'Content Reach',s3:'Years of Experience',
   }
 }
@@ -916,6 +932,7 @@ function toggleLang(){
   document.getElementById('h-big').innerHTML=c.big
   document.getElementById('h-desc').innerHTML=c.desc
   document.getElementById('h-cta').textContent=c.cta
+  document.getElementById('h-tagline').textContent=c.tagline
   document.getElementById('s1').textContent=c.s1
   document.getElementById('s2').textContent=c.s2
   document.getElementById('s3').textContent=c.s3
