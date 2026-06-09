@@ -965,7 +965,14 @@ footer{
 .page-hero h1{font-family:'Noto Serif TC','Microsoft JhengHei','PingFang TC',serif;font-weight:600;font-size:clamp(32px,4vw,52px);color:#fff;letter-spacing:2px;line-height:1.3;position:relative;z-index:1;margin-bottom:12px}
 .page-hero h1 .hi{background:linear-gradient(90deg,#60A5FA,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .page-hero p{font-size:14px;color:rgba(255,255,255,.5);max-width:480px;margin:0 auto;line-height:2;position:relative;z-index:1}
-@media(max-width:960px){.page-hero{padding:120px 20px 60px}}
+.page-nav{background:var(--off);padding:48px;border-top:1px solid var(--line)}
+.page-nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.page-nav-label{font-size:11px;letter-spacing:2px;color:var(--muted)}
+.page-nav-links{display:flex;gap:10px;flex-wrap:wrap}
+.page-nav-btn{font-size:12px;letter-spacing:1px;color:var(--ink2);border:1.5px solid var(--line);padding:10px 20px;border-radius:50px;text-decoration:none;transition:all .25s;font-weight:400}
+.page-nav-btn:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-dim)}
+.page-nav-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+@media(max-width:960px){.page-hero{padding:120px 20px 60px}.page-nav{padding:32px 20px}.page-nav-inner{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -1168,6 +1175,18 @@ footer{
     <a href="contact.html" class="btn-outline" style="color:var(--ink);border-color:var(--line2)">免費諮詢</a>
   </div>
 </section>
+<nav class="page-nav">
+  <div class="page-nav-inner">
+    <span class="page-nav-label">前往其他頁面</span>
+    <div class="page-nav-links"><a href="index.html" class="page-nav-btn active">🏠 首頁</a>
+<a href="about.html" class="page-nav-btn">關於</a>
+<a href="services.html" class="page-nav-btn">服務</a>
+<a href="cases.html" class="page-nav-btn">案例</a>
+<a href="course.html" class="page-nav-btn">課程</a>
+<a href="contact.html" class="page-nav-btn">聯絡</a>
+</div>
+  </div>
+</nav>
 <footer>
   <a class="footer-logo" href="index.html">
     <span class="footer-logo-box">CI</span>
