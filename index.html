@@ -993,6 +993,7 @@ footer{
   </ul>
   <div class="nav-r">
     <a href="https://www.instagram.com/creation_influence/" target="_blank" class="nav-ig">Instagram</a>
+    <button id="langBtn" onclick="toggleLang()" style="font-size:12px;letter-spacing:1.5px;font-weight:600;color:var(--blue);background:var(--blue-dim);border:1.5px solid var(--blue-pale);padding:8px 16px;border-radius:50px;cursor:pointer;transition:all .25s;margin-right:4px">中 / EN</button>
     <a href="contact.html" class="nav-cta">免費諮詢 ✦</a>
   </div>
   <div class="nav-ham" id="navHam">
@@ -1019,7 +1020,7 @@ footer{
         <span class="hero-tag-dot"></span>
         <span class="hero-tag-text">Creation Influence · 短影音行銷</span>
       </div>
-      <h1 class="hero-title r">
+      <h1 class="hero-title r" data-zh="讓每個有故事的人<br>都值得<span class='hi'>被看見</span>" data-en="Everyone with a story<br>deserves to be <span class='hi'>seen</span>">
         讓每個有故事的人<br>都值得<span class="hi">被看見</span>
       </h1>
       <p class="hero-sub r">從 0 到 1，打造屬於你的個人 IP</p>
@@ -1171,7 +1172,7 @@ footer{
   </div>
 </section>
 <section style="background:#f1f5f9;padding:64px 48px;text-align:center;border-top:1px solid #e2e8f0">
-  <p style="font-size:13px;color:#475569;margin-bottom:28px;letter-spacing:1px;font-weight:500">想了解更多？</p>
+  <p data-i18n="more-title" style="font-size:13px;color:#475569;margin-bottom:28px;letter-spacing:1px;font-weight:500">想了解更多？</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
     <a href="services.html" class="btn-primary">查看服務項目 →</a>
     <a href="course.html" class="btn-primary" style="background:linear-gradient(135deg,#0891b2,#06b6d4)">個人品牌課 →</a>
@@ -1301,5 +1302,112 @@ document.querySelectorAll('.faq-q').forEach(q=>{
 })
 
 /* form handled by Netlify */</script>
+
+<script>
+const i18n = {
+  zh: {
+    'nav-about':   '關於',
+    'nav-services':'服務',
+    'nav-cases':   '案例',
+    'nav-course':  '課程',
+    'nav-contact': '聯絡',
+    'nav-cta':     '免費諮詢 ✦',
+    'hero-tag':    '短影音行銷',
+    'hero-title':  '讓每個有故事的人<br>都值得<span class="hi">被看見</span>',
+    'hero-sub':    '從 0 到 1，打造屬於你的個人 IP',
+    'hero-desc':   '我們相信，不是只有網紅才能變現。<br>只要你有故事、有專業、有真實的價值，<br>創影陪你把影響力轉化為最穩定的收入。',
+    'hero-btn1':   '開始免費諮詢 →',
+    'hero-btn2':   '了解服務',
+    'stat1-l':     '爆款影片',
+    'stat2-l':     '累積觀看',
+    'stat3-l':     '品牌合作',
+    'pain-chip':   '你是否也遇到了這些',
+    'pain-title':  '我懂你的<span class="hi">卡關</span><br>因為我們都走過',
+    'more-title':  '想了解更多？',
+    'btn-svc':     '查看服務項目 →',
+    'btn-course':  '個人品牌課 →',
+    'btn-cases':   '精選案例',
+    'btn-consult': '免費諮詢',
+    'ticker': '短影音代操 ✦ 個人品牌定位 ✦ 內容策略規劃 ✦ IP 孵化系統 ✦ 影音商業顧問 ✦ 整合型行銷 ✦'
+  },
+  en: {
+    'nav-about':   'About',
+    'nav-services':'Services',
+    'nav-cases':   'Cases',
+    'nav-course':  'Course',
+    'nav-contact': 'Contact',
+    'nav-cta':     'Free Consult ✦',
+    'hero-tag':    'Short Video Marketing',
+    'hero-title':  'Everyone with a story<br>deserves to be <span class="hi">seen</span>',
+    'hero-sub':    'Build your personal IP from 0 to 1',
+    'hero-desc':   'You don't need to be an influencer to monetize.<br>As long as you have a story and real value,<br>Creation Influence will turn your impact into income.',
+    'hero-btn1':   'Free Consultation →',
+    'hero-btn2':   'Our Services',
+    'stat1-l':     'Viral Videos',
+    'stat2-l':     'Total Views',
+    'stat3-l':     'Brand Partners',
+    'pain-chip':   'Sound familiar?',
+    'pain-title':  'We know your <span class="hi">struggle</span><br>because we've been there',
+    'more-title':  'Want to learn more?',
+    'btn-svc':     'View Services →',
+    'btn-course':  'Personal Brand Course →',
+    'btn-cases':   'Our Cases',
+    'btn-consult': 'Free Consult',
+    'ticker': 'Short Video Management ✦ Personal Brand Positioning ✦ Content Strategy ✦ IP Incubation ✦ Video Business Consulting ✦ Integrated Marketing ✦'
+  }
+}
+
+let currentLang = 'zh'
+
+function toggleLang() {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh'
+  const t = i18n[currentLang]
+  const btn = document.getElementById('langBtn')
+  btn.textContent = currentLang === 'zh' ? '中 / EN' : 'EN / 中'
+
+  // Nav links
+  const navLinks = document.querySelectorAll('.nav-links li a')
+  const keys = ['nav-about','nav-services','nav-cases','nav-course','nav-contact']
+  navLinks.forEach((a,i) => { if(keys[i]) a.textContent = t[keys[i]] })
+  
+  // Nav CTA
+  const cta = document.querySelector('.nav-cta')
+  if(cta) cta.textContent = t['nav-cta']
+
+  // Hero
+  const heroTag = document.querySelector('.hero-tag-text')
+  if(heroTag) heroTag.textContent = t['hero-tag']
+  
+  const heroTitle = document.querySelector('.hero-title')
+  if(heroTitle) heroTitle.innerHTML = t['hero-title']
+  
+  const heroSub = document.querySelector('.hero-sub')
+  if(heroSub) heroSub.textContent = t['hero-sub']
+  
+  const heroDesc = document.querySelector('.hero-desc')
+  if(heroDesc) heroDesc.innerHTML = t['hero-desc']
+  
+  const heroBtns = document.querySelectorAll('.hero-btns a')
+  if(heroBtns[0]) heroBtns[0].textContent = t['hero-btn1']
+  if(heroBtns[1]) heroBtns[1].textContent = t['hero-btn2']
+  
+  // Stats
+  const statLabels = document.querySelectorAll('.hs-l')
+  if(statLabels[0]) statLabels[0].textContent = t['stat1-l']
+  if(statLabels[1]) statLabels[1].textContent = t['stat2-l']
+  if(statLabels[2]) statLabels[2].textContent = t['stat3-l']
+
+  // Pain section chip
+  const painChip = document.querySelector('.sec-chip-txt')
+  if(painChip) painChip.textContent = t['pain-chip']
+  
+  const painTitle = document.querySelector('#pain .sec-title')
+  if(painTitle) painTitle.innerHTML = t['pain-title']
+
+  // Bottom CTA buttons
+  const moreTxt = document.querySelector('[data-i18n="more-title"]')
+  if(moreTxt) moreTxt.textContent = t['more-title']
+}
+</script>
 </body>
 </html>
