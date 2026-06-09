@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>創影行銷｜讓每個有故事的人，都值得被看見</title>
-<!-- fonts loaded via system fallback -->
+<title>首頁 · 創影行銷｜創影行銷</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -958,26 +957,33 @@ footer{
   .cases-grid{grid-template-columns:1fr}
   .psteps{grid-template-columns:1fr}
 }
+
+.page-hero{padding:140px 48px 80px;background:linear-gradient(145deg,#0A1628 0%,#0F2952 50%,#0A1F4A 100%);text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
+.page-hero-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:6px 18px;border-radius:50px;margin-bottom:20px;position:relative;z-index:1}
+.page-hero-chip span{font-size:11px;letter-spacing:2.5px;color:rgba(255,255,255,.6)}
+.page-hero h1{font-family:'Noto Serif TC','Microsoft JhengHei','PingFang TC',serif;font-weight:600;font-size:clamp(32px,4vw,52px);color:#fff;letter-spacing:2px;line-height:1.3;position:relative;z-index:1;margin-bottom:12px}
+.page-hero h1 .hi{background:linear-gradient(90deg,#60A5FA,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero p{font-size:14px;color:rgba(255,255,255,.5);max-width:480px;margin:0 auto;line-height:2;position:relative;z-index:1}
+@media(max-width:960px){.page-hero{padding:120px 20px 60px}}
 </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav id="mainNav">
-  <a class="nav-logo" href="#">
+  <a class="nav-logo" href="index.html">
     <span class="nav-logo-box">CI</span>
     <span class="nav-logo-text">創影行銷</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#about">關於創影</a></li>
-    <li><a href="#services">服務項目</a></li>
-    <li><a href="#cases">精選案例</a></li>
-    <li><a href="#course">個人品牌課</a></li>
-    <li><a href="#faq">常見問題</a></li>
+    <li><a href="about.html">關於</a></li>
+    <li><a href="services.html">服務</a></li>
+    <li><a href="cases.html">案例</a></li>
+    <li><a href="course.html">課程</a></li>
+    <li><a href="contact.html">聯絡</a></li>
   </ul>
   <div class="nav-r">
     <a href="https://www.instagram.com/creation_influence/" target="_blank" class="nav-ig">Instagram</a>
-    <a href="#contact" class="nav-cta">免費諮詢 ✦</a>
+    <a href="contact.html" class="nav-cta">免費諮詢 ✦</a>
   </div>
   <div class="nav-ham" id="navHam">
     <span></span><span></span><span></span>
@@ -989,10 +995,9 @@ footer{
   <a href="#cases">精選案例</a>
   <a href="#course">個人品牌課</a>
   <a href="#faq">常見問題</a>
-  <a href="#contact">免費諮詢</a>
+  <a href="contact.html">免費諮詢</a>
 </div>
 
-<!-- HERO -->
 <section class="hero">
   <canvas id="particles-canvas"></canvas>
   <div class="hero-blob1"></div>
@@ -1014,8 +1019,8 @@ footer{
         創影陪你把影響力轉化為最穩定的收入。
       </p>
       <div class="hero-btns r">
-        <a href="#contact" class="btn-primary">開始免費諮詢 →</a>
-        <a href="#services" class="btn-outline">了解服務</a>
+        <a href="contact.html" class="btn-primary">開始免費諮詢 →</a>
+        <a href="services.html" class="btn-outline">了解服務</a>
       </div>
       <div class="hero-stats r">
         <div class="hs">
@@ -1102,8 +1107,6 @@ footer{
     </div>
   </div>
 </section>
-
-<!-- TICKER -->
 <div class="ticker">
   <div class="ticker-track">
     <span class="ticker-item">短影音代操 <span class="ticker-sep">✦</span></span>
@@ -1120,8 +1123,6 @@ footer{
     <span class="ticker-item">整合型行銷 <span class="ticker-sep">✦</span></span>
   </div>
 </div>
-
-<!-- PAIN -->
 <section class="pain-sec" id="pain">
   <div class="pain-top">
     <div>
@@ -1159,415 +1160,31 @@ footer{
     </div>
   </div>
 </section>
-
-<!-- SERVICES -->
-<section class="svc-sec sec" id="services">
-  <div class="svc-header">
-    <div>
-      <div class="sec-chip r"><span class="sec-chip-dot"></span><span class="sec-chip-txt">Services · 服務項目</span></div>
-      <h2 class="sec-title r">我們如何<br>真正<span class="hi">幫助你</span></h2>
-    </div>
-    <p class="sec-lead r">四大核心服務，從個人 IP 孵化到整合行銷，每一個方案都以真實可衡量的成果為目標。不是說說而已，是真的陪你走。</p>
-  </div>
-  <div class="svc-grid">
-    <div class="svc-card r">
-      <div class="svc-icon-wrap">🎬</div>
-      <div class="svc-name">短影音代操</div>
-      <div class="svc-en">SHORT VIDEO MANAGEMENT</div>
-      <p class="svc-body">你只需要專注在你最擅長的事，其他交給我們。從選題、腳本、拍攝、剪輯到數據優化，每一個環節都由專業團隊把關。</p>
-      <ul class="svc-items">
-        <li>每月 15 支以上短影音</li>
-        <li>企劃選題 · 腳本撰寫</li>
-        <li>拍攝剪輯 · 平台發佈</li>
-        <li>數據追蹤 · 月報優化</li>
-      </ul>
-    </div>
-    <div class="svc-card r d1">
-      <div class="svc-icon-wrap">💡</div>
-      <div class="svc-name">影音商業顧問</div>
-      <div class="svc-en">VIDEO BUSINESS CONSULTING</div>
-      <p class="svc-body">已有帳號但卡關了？我們幫你找到根本原因。不是給你一份報告，而是真正坐下來，一起看清楚問題在哪、下一步怎麼走。</p>
-      <ul class="svc-items">
-        <li>品牌定位深度診斷</li>
-        <li>商業模式重新設計</li>
-        <li>內容策略全面規劃</li>
-        <li>客製化即時陪跑諮詢</li>
-      </ul>
-    </div>
-    <div class="svc-card feat r d2">
-      <div class="svc-icon-wrap">🚀</div>
-      <div class="svc-name">整合型行銷</div>
-      <div class="svc-en">INTEGRATED MARKETING</div>
-      <p class="svc-body">超越短影音的邊界，讓品牌聲量在每一個角落延伸。線下活動、KOL 媒合、Podcast 合作，每一次露出都成為品牌資產。</p>
-      <ul class="svc-items">
-        <li>線下活動策劃執行</li>
-        <li>KOL 精準媒合發案</li>
-        <li>Podcast 跨媒體合作</li>
-        <li>行銷顧問 · 業配短片</li>
-      </ul>
-    </div>
-    <div class="svc-card r d3">
-      <div class="svc-icon-wrap">🌟</div>
-      <div class="svc-name">IP 孵化系統</div>
-      <div class="svc-en">IP INCUBATION SYSTEM</div>
-      <p class="svc-body">這不只是一個服務，是一套為素人打造的完整變現養成系統。從 IP 定位到商業模式，陪你把自己變成可持續運作的事業。</p>
-      <ul class="svc-items">
-        <li>IP 定位 · 形象策略</li>
-        <li>內容公式 · 流量系統</li>
-        <li>變現路徑設計</li>
-        <li>全程陪跑 · 即時支援</li>
-      </ul>
-    </div>
+<section style="background:#fff;padding:64px 48px;text-align:center">
+  <p style="font-size:13px;color:var(--muted);margin-bottom:28px;letter-spacing:1px">想了解更多？</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="services.html" class="btn-primary">查看服務項目 →</a>
+    <a href="cases.html" class="btn-outline" style="color:var(--ink);border-color:var(--line2)">精選案例</a>
+    <a href="contact.html" class="btn-outline" style="color:var(--ink);border-color:var(--line2)">免費諮詢</a>
   </div>
 </section>
-
-<!-- ABOUT -->
-<section class="about-sec sec" id="about">
-  <div class="about-grid">
-    <div class="about-visual-wrap">
-      <div class="about-img rl">
-        <div class="about-img-ci">CI</div>
-        <div class="about-img-lbl">品牌形象照</div>
-        <div class="about-img-accent">
-          <div class="about-img-tag">✦ 創影行銷 Since 2018</div>
-        </div>
-      </div>
-      <div class="about-since r">深耕自媒體至今 · 6 年實戰經驗</div>
-    </div>
-    <div class="about-content-wrap">
-      <div class="sec-chip r"><span class="sec-chip-dot"></span><span class="sec-chip-txt">About · 關於創影</span></div>
-      <h2 class="sec-title r">我們相信<br>每個人都值得<span class="hi">被看見</span></h2>
-      <div class="about-body">
-        <p class="r">創影是一支<strong>專注於個人品牌打造與影音內容變現</strong>的自媒體公司。我們不只是一個行銷團隊，更是陪著客戶一起成長的夥伴。</p>
-        <p class="r">我們相信，不是只有網紅才能變現。只要你有故事、有專業、有真實的價值，每一個素人也能成為時代的 KOL。這不是口號，是我們親身見證過的事。</p>
-        <p class="r">從選題企劃、腳本撰寫、拍攝剪輯，到平台發佈與數據優化，創影以<strong>實戰導向</strong>為核心，全流程陪伴每一位合作夥伴，找到屬於自己的流量節奏與商業路徑。</p>
-        <div class="about-quote r">
-          <p>「 陪你走過 0 到 1，從內容出發，打造屬於你的個人 IP 與商業價值。 」</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOUNDER -->
-<section class="founder-sec sec" id="founder">
-  <div class="founder-grid">
-    <div class="founder-photo rl">
-      <div class="founder-photo-bg">N</div>
-      <div class="founder-photo-bar">
-        <div class="founder-name-txt">朱芳萱 · Nadin</div>
-        <div class="founder-role-txt">創影行銷 · 創辦人</div>
-      </div>
-    </div>
-    <div class="founder-content">
-      <div class="sec-chip r"><span class="sec-chip-dot"></span><span class="sec-chip-txt">Founder · 創辦人</span></div>
-      <h3 class="r">把故事<span class="hi">變成流量</span><br>把流量導向<span class="hi">真實的商業價值</span></h3>
-      <p class="r">Nadin 自 2018 年深耕自媒體領域，<strong>操盤數十個帳號</strong>，走過從零開始到商業規模化的完整路徑。她深知每個創作者在不同階段所面臨的孤獨與困惑，也正因為如此，她選擇不只做自己，而是陪著更多人一起走。</p>
-      <p class="r">致力打造<strong>台灣第一素人孵化平台</strong>，幫助專業技能型人才與創業者，建立可持續變現的個人品牌系統。不只教你做內容，更教你讓內容成為你最穩定的資產。</p>
-      <div class="founder-links r">
-        <a href="https://www.instagram.com/creation_influence/" target="_blank" class="founder-lnk">創影 IG ↗</a>
-        <a href="#" class="founder-lnk">Nadin IG ↗</a>
-      </div>
-      <div class="founder-tags r">
-        <span class="ftag">短影音策略</span>
-        <span class="ftag">個人 IP 定位</span>
-        <span class="ftag">商業模式設計</span>
-        <span class="ftag">內容變現系統</span>
-        <span class="ftag">數據優化</span>
-        <span class="ftag">自媒體經營</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process-sec" id="process">
-  <div class="sec-chip r"><span class="sec-chip-dot"></span><span class="sec-chip-txt">Process · 合作流程</span></div>
-  <h2 class="sec-title r" style="max-width:440px;color:#fff">四個步驟<br><span class="hi">陪你穩穩走</span></h2>
-  <div class="psteps" style="margin-top:52px">
-    <div class="pstep r">
-      <div class="pstep-circle"><span class="pstep-n">01</span></div>
-      <div class="pstep-title">品牌診斷</div>
-      <p class="pstep-desc">深入了解你目前的狀況、競品環境與目標受眾，不急著給答案，先把問題看清楚。</p>
-    </div>
-    <div class="pstep r d1">
-      <div class="pstep-circle"><span class="pstep-n">02</span></div>
-      <div class="pstep-title">策略規劃</div>
-      <p class="pstep-desc">制定內容日曆、腳本框架與平台策略，每一步都有清楚的目標，讓執行有所依歸。</p>
-    </div>
-    <div class="pstep r d2">
-      <div class="pstep-circle"><span class="pstep-n">03</span></div>
-      <div class="pstep-title">創作執行</div>
-      <p class="pstep-desc">腳本、拍攝、剪輯、字幕，一手包辦。每一支影片都認真做，因為每一支都代表你。</p>
-    </div>
-    <div class="pstep r d3">
-      <div class="pstep-circle"><span class="pstep-n">04</span></div>
-      <div class="pstep-title">持續優化</div>
-      <p class="pstep-desc">我們持續追蹤、調整、迭代，把每一次的成果都轉化為下一次的養分，讓成長不停止。</p>
-    </div>
-  </div>
-</section>
-
-<!-- CASES -->
-<section class="cases-sec sec" id="cases">
-  <div class="cases-top">
-    <div>
-      <div class="sec-chip r"><span class="sec-chip-dot"></span><span class="sec-chip-txt">Cases · 精選案例</span></div>
-      <h2 class="sec-title r">每一個數字<br>背後都有<span class="hi">一個故事</span></h2>
-    </div>
-    <p class="cases-note r">我們不喜歡用華麗的說詞。以下是一些真實發生過的事，每一個合作，都讓我們更相信——只要找到對的方式，每個品牌都值得被看見。</p>
-  </div>
-  <div class="cases-grid">
-    <div class="case-card r">
-      <div class="case-thumb c1">
-        <div class="case-thumb-char">雪</div>
-        <span class="case-badge">TikTok · IG</span>
-      </div>
-      <div class="case-body">
-        <div class="case-brand-n">雪長姊滑雪學校</div>
-        <div class="case-brand-c">短影音代操</div>
-        <p class="case-desc-txt">場景化教學短影音，讓專業技術以輕鬆有趣的方式觸達非滑雪圈受眾，成功建立品牌認知並帶動招生。</p>
-        <div class="case-stats">
-          <div class="cstat"><div class="cstat-v">150萬</div><div class="cstat-k">單月觀看</div></div>
-          <div class="cstat"><div class="cstat-v">+3.8倍</div><div class="cstat-k">粉絲成長</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="case-card r d1">
-      <div class="case-thumb c2">
-        <div class="case-thumb-char">車</div>
-        <span class="case-badge">多平台</span>
-      </div>
-      <div class="case-body">
-        <div class="case-brand-n">台端微電車</div>
-        <div class="case-brand-c">短影音代操</div>
-        <p class="case-desc-txt">以城市生活風格為切角，讓電動車不只是交通工具，更是一種生活態度的表達，帶動官網流量大幅成長。</p>
-        <div class="case-stats">
-          <div class="cstat"><div class="cstat-v">200萬</div><div class="cstat-k">累積觀看</div></div>
-          <div class="cstat"><div class="cstat-v">+500%</div><div class="cstat-k">官網流量</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="case-card r d2">
-      <div class="case-thumb c3">
-        <div class="case-thumb-char">食</div>
-        <span class="case-badge">IG Reels</span>
-      </div>
-      <div class="case-body">
-        <div class="case-brand-n">如嬌餐飲</div>
-        <div class="case-brand-c">短影音代操</div>
-        <p class="case-desc-txt">美食製作 ASMR 切角，48 小時有機擴散至百萬觀看，帶動門市業績翻倍，並引發媒體主動報導。</p>
-        <div class="case-stats">
-          <div class="cstat"><div class="cstat-v">100萬</div><div class="cstat-k">單片觀看</div></div>
-          <div class="cstat"><div class="cstat-v">+200%</div><div class="cstat-k">週末業績</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="case-card r d3">
-      <div class="case-thumb c4">
-        <div class="case-thumb-char">命</div>
-        <span class="case-badge">IP 顧問</span>
-      </div>
-      <div class="case-body">
-        <div class="case-brand-n">黃穎馨命理</div>
-        <div class="case-brand-c">影音商業顧問</div>
-        <p class="case-desc-txt">從沒有帳號開始，建立個人品牌定位，透過精準內容策略，四個月內讓預約轉換大幅提升。</p>
-        <div class="case-stats">
-          <div class="cstat"><div class="cstat-v">0→1萬</div><div class="cstat-k">粉絲數</div></div>
-          <div class="cstat"><div class="cstat-v">+12倍</div><div class="cstat-k">預約轉換</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="case-card r d4">
-      <div class="case-thumb c5">
-        <div class="case-thumb-char">聲</div>
-        <span class="case-badge">Podcast</span>
-      </div>
-      <div class="case-body">
-        <div class="case-brand-n">追星事務所</div>
-        <div class="case-brand-c">整合行銷</div>
-        <p class="case-desc-txt">跨媒體 Podcast 合作策略，結合短影音推廣，打造聲音內容與視覺內容的雙向引流生態系。</p>
-        <div class="case-stats">
-          <div class="cstat"><div class="cstat-v">5集</div><div class="cstat-k">聯名內容</div></div>
-          <div class="cstat"><div class="cstat-v">+80%</div><div class="cstat-k">收聽成長</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COURSE -->
-<section class="course-sec" id="course">
-  <div class="course-grid">
-    <div>
-      <div class="sec-chip r"><span class="sec-chip-dot"></span><span class="sec-chip-txt">Course · 個人品牌定位團課</span></div>
-      <h2 class="sec-title r">找到定位<br>讓流量<span class="hi">真正為你工作</span></h2>
-      <p class="sec-lead r">這堂課不教你追流量，教你找到自己的位置，讓內容自然而然吸引到對的人、對的機會。</p>
-      <div class="course-pts">
-        <div class="cpt r">
-          <div class="cpt-icon">❓</div>
-          <div><div class="cpt-title">為什麼你沒有流量？</div><p class="cpt-desc">拆解演算法邏輯，找出你的內容在哪個環節失分，從根源解決問題。</p></div>
-        </div>
-        <div class="cpt r d1">
-          <div class="cpt-icon">🎯</div>
-          <div><div class="cpt-title">如何找到你的商業定位？</div><p class="cpt-desc">透過系統化的定位框架，找到只有你才能佔領的品牌利基，讓競爭變得沒有意義。</p></div>
-        </div>
-        <div class="cpt r d2">
-          <div class="cpt-icon">💰</div>
-          <div><div class="cpt-title">變現模式設計</div><p class="cpt-desc">設計一套適合你的商業路徑，讓每一個粉絲的信任感，都有機會轉化為真實的收入。</p></div>
-        </div>
-        <div class="cpt r d3">
-          <div class="cpt-icon">🔥</div>
-          <div><div class="cpt-title">內容公式拆解</div><p class="cpt-desc">學會爆款影片的底層邏輯，讓每支影片都有機會觸達更多陌生受眾。</p></div>
-        </div>
-      </div>
-    </div>
-    <div class="course-box r d1">
-      <div class="sec-chip"><span class="sec-chip-dot"></span><span class="sec-chip-txt">小班制 · 限額報名</span></div>
-      <h3>素人也能<br>成為 <span class="hi">KOL</span></h3>
-      <p>這堂課採小班制上課，確保每位學員都能獲得充分的個別指導。課程結合理論框架與實戰演練，學完即可直接應用在你的帳號上。</p>
-      <div class="course-tags">
-        <span class="ctag">品牌定位</span><span class="ctag">內容策略</span>
-        <span class="ctag">粉絲經營</span><span class="ctag">變現模式</span>
-        <span class="ctag">爆款公式</span><span class="ctag">數據解讀</span>
-      </div>
-      <a href="#contact" class="btn-white">了解課程詳情 →</a>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-sec" id="faq">
-  <div class="faq-wrap">
-    <div style="text-align:center;margin-bottom:0">
-      <div class="sec-chip r" style="margin:0 auto 16px"><span class="sec-chip-dot"></span><span class="sec-chip-txt">FAQ · 常見問題</span></div>
-      <h2 class="sec-title r" style="text-align:center">你可能想知道的<span class="hi">那些事</span></h2>
-      <p class="sec-lead r" style="margin:0 auto;text-align:center;max-width:440px">有任何問題都歡迎直接聯繫我們，這裡先回答幾個最常被問到的。</p>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item r">
-        <div class="faq-q"><span class="faq-q-txt">我沒有拍攝設備，也能合作嗎？</span><div class="faq-icon">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">完全可以！創影提供完整的拍攝設備與場地支援。你只需要帶著你的專業與故事來，我們負責把它拍成最棒的內容。當然，如果你有自己的設備也歡迎配合使用。</div></div>
-      </div>
-      <div class="faq-item r d1">
-        <div class="faq-q"><span class="faq-q-txt">合作最短期限是多久？有試用方案嗎？</span><div class="faq-icon">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">我們提供單月方案讓你感受服務品質，但建議至少 3 個月才能看到明顯的數據成長。短影音的演算法需要時間累積，我們通常在第 2 個月就能看到明顯的趨勢變化。</div></div>
-      </div>
-      <div class="faq-item r d2">
-        <div class="faq-q"><span class="faq-q-txt">你們主要服務哪些產業？</span><div class="faq-icon">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">我們服務過美妝保養、餐飲食品、電商零售、專業服務（律師、命理師、教練等）、教育培訓、以及個人品牌創作者等多種產業。只要你有真實的價值和故事，我們都能幫你找到最適合的呈現方式。</div></div>
-      </div>
-      <div class="faq-item r d3">
-        <div class="faq-q"><span class="faq-q-txt">費用大概是多少？</span><div class="faq-icon">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">因為每個品牌的需求與目標都不同，我們沒有統一定價。填寫諮詢表單後，我們會先了解你的現況，再提供最適合你的方案建議。我們承諾不做硬推銷，只給你最誠實的評估。</div></div>
-      </div>
-      <div class="faq-item r d4">
-        <div class="faq-q"><span class="faq-q-txt">我可以保有對內容的控制權嗎？</span><div class="faq-icon">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">當然！每支影片在正式發布前，都會經過你的審閱與確認。你對品牌形象和內容方向有最終決定權，我們的角色是協助執行與優化，而不是取代你的聲音。</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BLOG -->
-<section class="blog-sec" id="blog">
-  <div class="blog-hd">
-    <div>
-      <div class="sec-chip r"><span class="sec-chip-dot"></span><span class="sec-chip-txt">Journal · 品牌行銷觀察日記</span></div>
-      <h2 class="sec-title r">比別人<span class="hi">早一步</span>看見趨勢</h2>
-    </div>
-    <a href="#" class="blog-all r">查看全部文章 →</a>
-  </div>
-  <div class="blog-grid">
-    <div class="blog-card lg r">
-      <div class="blog-thumb">◈</div>
-      <div class="blog-bd">
-        <div class="blog-cat">短影音趨勢</div>
-        <div class="blog-ttl">2025 短影音演算法大解析：為什麼你的影片沒有被推播？</div>
-        <p style="font-size:13px;color:var(--muted);line-height:2;font-weight:300;margin-bottom:10px">TikTok 與 IG Reels 的演算法在今年出現了哪些關鍵轉變？本文從實際帳號操作數據出發，拆解影響曝光的核心因素。</p>
-        <div class="blog-date">2025 · 05 · 閱讀約 8 分鐘</div>
-      </div>
-    </div>
-    <div class="blog-card r d1">
-      <div class="blog-thumb">◇</div>
-      <div class="blog-bd">
-        <div class="blog-cat">品牌拆解</div>
-        <div class="blog-ttl">從 0 到百萬粉絲的帳號策略，三個你可能忽略的細節</div>
-        <div class="blog-date">2025 · 04 · 約 6 分鐘</div>
-      </div>
-    </div>
-    <div class="blog-card r d2">
-      <div class="blog-thumb">◆</div>
-      <div class="blog-bd">
-        <div class="blog-cat">商業變現模式</div>
-        <div class="blog-ttl">不靠業配也能賺錢——五種素人可以從現在開始的變現路徑</div>
-        <div class="blog-date">2025 · 03 · 約 7 分鐘</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-sec" id="contact">
-  <div class="contact-inner">
-    <div>
-      <div class="sec-chip r"><span class="sec-chip-dot"></span><span class="sec-chip-txt">Contact · 諮詢我們</span></div>
-      <h2 class="sec-title r">準備好了嗎<br>讓我們<span class="hi">一起走</span></h2>
-      <p class="sec-lead r">填寫表單後，我們會在 24 小時內與你聯繫，提供一次免費的品牌短影音診斷。不需要準備什麼，只需要帶著你的故事來。</p>
-      <div class="contact-info r">
-        <div class="ci-row"><span class="ci-lbl">Instagram</span><span class="ci-val">@creation_influence</span></div>
-        <div class="ci-row"><span class="ci-lbl">服務</span><span class="ci-val">短影音代操 · 商業顧問 · 整合行銷 · IP 孵化</span></div>
-        <div class="ci-row"><span class="ci-lbl">回覆</span><span class="ci-val">24 小時內回覆</span></div>
-      </div>
-    </div>
-    <div class="r d1">
-      <form name="consultation" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="consultation">
-        <div class="form-2col">
-          <div class="form-field"><label>姓名</label><input type="text" name="姓名" placeholder="你的名字" required></div>
-          <div class="form-field"><label>聯絡方式</label><input type="text" name="聯絡方式" placeholder="LINE ID 或手機" required></div>
-        </div>
-        <div class="form-2col">
-          <div class="form-field"><label>產業類別</label>
-            <select name="產業類別" required><option value="">請選擇</option><option>美妝保養</option><option>餐飲食品</option><option>電商零售</option><option>專業服務</option><option>教育培訓</option><option>個人品牌 / 創作者</option><option>其他</option></select>
-          </div>
-          <div class="form-field"><label>目前經營平台</label>
-            <select name="目前經營平台" required><option value="">請選擇</option><option>TikTok</option><option>Instagram</option><option>YouTube</option><option>多平台並行</option><option>尚未開始</option></select>
-          </div>
-        </div>
-        <div class="form-2col">
-          <div class="form-field"><label>預算範圍</label>
-            <select name="預算範圍"><option value="">請選擇</option><option>NT$ 10,000 以下</option><option>NT$ 10,000 – 30,000</option><option>NT$ 30,000 – 80,000</option><option>NT$ 80,000 以上</option><option>待討論</option></select>
-          </div>
-          <div class="form-field"><label>客群年齡</label><input type="text" name="客群年齡" placeholder="例：25–35 歲女性"></div>
-        </div>
-        <div class="form-field"><label>目前遇到的問題</label><textarea name="目前遇到的問題" required placeholder="請簡單描述你的現況與希望達到的目標，或任何你想對我們說的話。"></textarea></div>
-        <button type="submit" class="form-sub" id="fsub">送出諮詢申請 →</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <a class="footer-logo" href="#">
+  <a class="footer-logo" href="index.html">
     <span class="footer-logo-box">CI</span>
     <span class="footer-logo-txt">創影行銷</span>
   </a>
   <nav class="footer-nav">
-    <a href="#about">關於創影</a>
-    <a href="#services">服務項目</a>
-    <a href="#cases">精選案例</a>
-    <a href="#course">個人品牌課</a>
-    <a href="#faq">常見問題</a>
-    <a href="#contact">諮詢我們</a>
+    <a href="about.html">關於創影</a>
+    <a href="services.html">服務項目</a>
+    <a href="cases.html">精選案例</a>
+    <a href="course.html">個人品牌課</a>
+    <a href="contact.html">常見問題</a>
+    <a href="contact.html">諮詢我們</a>
     <a href="https://www.instagram.com/creation_influence/" target="_blank">Instagram</a>
   </nav>
   <div class="footer-cr">© 2025 Creation Influence · All rights reserved</div>
 </footer>
-
-<script>
-/* ── Nav scroll ── */
+<script>/* ── Nav scroll ── */
 const nav = document.getElementById('mainNav')
 window.addEventListener('scroll',()=>{
   nav.classList.toggle('scrolled', window.scrollY > 40)
@@ -1671,7 +1288,6 @@ document.querySelectorAll('.faq-q').forEach(q=>{
   })
 })
 
-/* form handled by Netlify */
-</script>
+/* form handled by Netlify */</script>
 </body>
 </html>
